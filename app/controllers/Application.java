@@ -8,6 +8,8 @@ import views.html.*;
 
 import models.*;
 
+import static play.data.Form.form;
+
 public class Application extends Controller {
   static Form<Task> taskForm = form(Task.class); 
   

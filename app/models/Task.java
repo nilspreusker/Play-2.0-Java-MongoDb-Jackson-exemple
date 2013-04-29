@@ -17,7 +17,7 @@ public class Task{
 
   public String label;
 
-  private static JacksonDBCollection<Task, String> coll = MongoDB.getCollection("tasks", Task.class, String.class);
+  private static JacksonDBCollection<Task, String> coll = (JacksonDBCollection<Task, String>) MongoDB.getCollection("tasks", Task.class, String.class);
 
   public static List<Task> all() {
     return Task.coll.find().toArray();
